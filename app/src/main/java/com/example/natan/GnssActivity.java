@@ -126,7 +126,29 @@ public class GnssActivity extends AppCompatActivity {
         textView.setText(mens);
     }
 
-    //Seguindo slide 47
+    
+    public void onSatelliteStatusChanged(@NonNull GnssStatus status) {
+        TextView tv_gnss=(TextView)findViewById(R.id.textviewLocation_id);
+        String mens="Dados do Sitema de Posicionamento\n";
+        if (status!=null) {
+            mens+="Número de Satélites:"+status.getSatelliteCount()+"\n";
+            for(int i=0;i<status.getSatelliteCount();i++) {
+                mens+="SVID="+status.getSvid(i)+"-"+status.getConstellationType(i)+
+                        "Azi="+status.getAzimuthDegrees(i)+
+
+                        "Elev="+status.getElevationDegrees(i)+ "X|";
+
+            }
+        }
+        else {
+            mens+="GNSS Não disponível";
+        }
+        tv_gnss.setText(mens);
+    }
+
+
+
+
     //Falta Setar o ID de Activity de text view e checar se o layout ta correto
     //
 }

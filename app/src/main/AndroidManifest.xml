@@ -16,6 +16,9 @@
         android:theme="@style/Theme.Natan"
         tools:targetApi="31">
         <activity
+            android:name=".GNSSView"
+            android:exported="false" />
+        <activity
             android:name=".GnssActivity"
             android:exported="false" />
         <activity
