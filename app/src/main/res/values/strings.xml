@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">natan</string>
+    <string name="gnss_view_link">GNSS</string>
+    <string name="titulo_gnss">GNSS</string>
+</resources>
